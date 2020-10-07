@@ -6,32 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AplikasiNama">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="25dp">
-        
+
         <TextView
+            android:id="@+id/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Masukkan Nama Anda"
+            android:text="@string/lbl_nama"
             android:textSize="16sp"
             android:layout_marginBottom="20dp"
             android:textColor="#000000"/>
 
         <EditText
+            android:id="@+id/editNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Anda"
             android:layout_marginBottom="20dp"/>
 
         <Button
+            android:id="@+id/buttonTampil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tampilkan" />
-        
+            android:text="@string/btn_tampil_nama"/>
+
+        <TextView
+            android:id="@+id/hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"/>
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DTS2020</string>
+    <string name="lbl_nama">Masukkan Nama Anda</string>
+    <string name="btn_tampil_nama">Tampilkan</string>
 </resources>
