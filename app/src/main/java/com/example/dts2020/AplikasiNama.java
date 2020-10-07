@@ -10,26 +10,23 @@ import android.widget.TextView;
 
 public class AplikasiNama extends AppCompatActivity {
 
-    String name;
-    EditText edtName;
-    Button btnName;
-    TextView txtName;
+    EditText editNama;
+    Button actionTampilkan;
+    TextView hasil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aplikasi_nama);
 
-        edtName = (EditText) findViewById(R.id.edtInputNama);
-        btnName = (Button) findViewById(R.id.btnTampilkan);
-        txtName = (TextView) findViewById(R.id.txtNama);
+        editNama = (EditText) findViewById(R.id.editNama);
+        actionTampilkan = (Button) findViewById(R.id.buttonTampil);
+        hasil = (TextView) findViewById(R.id.hasil);
 
-        name = String.valueOf(edtName.getText());
-
-        btnName.setOnClickListener(new View.OnClickListener(){
+        actionTampilkan.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                txtName.setText(name);
+            public void onClick(View v) {
+                hasil.setText(editNama.getText().toString());
             }
         });
     }
