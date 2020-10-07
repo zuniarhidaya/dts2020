@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AplikasiNama"></activity>
         <activity android:name=".AplikasiKalkulator" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".AplikasiListView">
+        <activity android:name=".AplikasiListView" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
