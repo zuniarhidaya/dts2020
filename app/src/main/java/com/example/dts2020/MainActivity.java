@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] menu = new String[]{"Input Nama","Aplikasi Kalkulator","Aplikasi ListView"};
+    String[] menu = new String[]{"Input Nama","Aplikasi Kalkulator","Aplikasi ListView","Penyimpanan Internal Storage", "Penyimpanan External Storage"};
 
     ListView listView;
 
@@ -38,14 +38,20 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent pindah = null;
 
-                if(i==0){
-                    pindah =new Intent(MainActivity.this,AplikasiNama.class);
+                if (i == 0) {
+                    pindah = new Intent(MainActivity.this, AplikasiNama.class);
                     startActivity(pindah);
-                } else if(i==1){
-                    pindah =new Intent(MainActivity.this,AplikasiKalkulator.class);
+                } else if (i == 1) {
+                    pindah = new Intent(MainActivity.this, AplikasiKalkulator.class);
                     startActivity(pindah);
-                } else {
-                    pindah =new Intent(MainActivity.this,AplikasiListView.class);
+                } else if (i == 2) {
+                    pindah = new Intent(MainActivity.this, AplikasiListView.class);
+                    startActivity(pindah);
+                } else if (i == 3) {
+                    pindah = new Intent(MainActivity.this, InternalActivity.class);
+                    startActivity(pindah);
+                } else if (i == 4) {
+                    pindah = new Intent(MainActivity.this, EksternalActivity.class);
                     startActivity(pindah);
                 }
             }
