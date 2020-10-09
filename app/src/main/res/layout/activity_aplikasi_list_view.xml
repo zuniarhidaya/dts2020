@@ -15,7 +15,7 @@
         android:layout_marginTop="17dp" />
     
     <TextView
-        android:text="Pilih Nama Negara :"
+        android:text="Daftar Teman :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"

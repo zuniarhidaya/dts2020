@@ -12,8 +12,8 @@ import android.widget.Toast;
 public class AplikasiListView extends AppCompatActivity {
 
     private ListView lview;
-    private String[] namanegara = new String[]{"Indonesia","Malaysia","Singapura","Thailand","Arab Saudi", "Palestina",
-    "Afganistan","Mesir"};
+    private String[] namas = new String[]{"Budi","Cecep","Chandra","Deni","Eko", "Fiqih",
+    "Gani","Hary"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +22,14 @@ public class AplikasiListView extends AppCompatActivity {
         getSupportActionBar().setTitle("Listview Sederhana"); //judul
 
         lview = findViewById(R.id.listView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(AplikasiListView.this, android.R.layout.simple_list_item_1, android.R.id.text1, namanegara);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(AplikasiListView.this, android.R.layout.simple_list_item_1, android.R.id.text1, namas);
 
         lview.setAdapter(adapter);
 
         lview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(AplikasiListView.this, "Memilih : "+namanegara[position], Toast.LENGTH_LONG).show();
+                Toast.makeText(AplikasiListView.this, "Memilih : "+namas[position], Toast.LENGTH_LONG).show();
             }
         });
     }
