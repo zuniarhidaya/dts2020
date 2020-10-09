@@ -11,13 +11,14 @@ import android.widget.ListView;
 
 import com.example.dts2020.activities.AplikasiCatatanHarian;
 import com.example.dts2020.activities.AplikasiEksternalStorage;
+import com.example.dts2020.activities.AplikasiSqlLite;
 import com.example.dts2020.activities.AplikasiValidasiLogin;
 import com.example.dts2020.activities.AplikasiInternalStorage;
 
 public class MainActivity extends AppCompatActivity {
 
     String[] menu = new String[]{"Input Nama","Aplikasi Kalkulator","Aplikasi ListView", "Aplikasi Internal Storage",
-    "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login"};
+    "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login", "Aplikasi SQLite"};
 
     ListView listView;
 
@@ -60,8 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if (i==5){
                     pindah =new Intent(MainActivity.this, AplikasiCatatanHarian.class);
                     startActivity(pindah);
-                } else {
+                } else if (i==6){
                     pindah =new Intent(MainActivity.this, AplikasiValidasiLogin.class);
+                    startActivity(pindah);
+                } else if(i==7){
+                    pindah =new Intent(MainActivity.this, AplikasiSqlLite.class);
                     startActivity(pindah);
                 }
             }
