@@ -9,11 +9,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.List;
+import com.example.dts2020.activities.AplikasiCatatanHarian;
+import com.example.dts2020.activities.AplikasiEksternalStorage;
+import com.example.dts2020.activities.AplikasiValidasiLogin;
+import com.example.dts2020.activities.AplikasiInternalStorage;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] menu = new String[]{"Input Nama","Aplikasi Kalkulator","Aplikasi ListView"};
+    String[] menu = new String[]{"Input Nama","Aplikasi Kalkulator","Aplikasi ListView", "Aplikasi Internal Storage",
+    "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login"};
 
     ListView listView;
 
@@ -44,8 +48,20 @@ public class MainActivity extends AppCompatActivity {
                 } else if(i==1){
                     pindah =new Intent(MainActivity.this,AplikasiKalkulator.class);
                     startActivity(pindah);
-                } else {
+                } else if (i==2){
                     pindah =new Intent(MainActivity.this,AplikasiListView.class);
+                    startActivity(pindah);
+                } else if (i==3){
+                    pindah =new Intent(MainActivity.this, AplikasiInternalStorage.class);
+                    startActivity(pindah);
+                } else if (i==4){
+                    pindah =new Intent(MainActivity.this, AplikasiEksternalStorage.class);
+                    startActivity(pindah);
+                } else if (i==5){
+                    pindah =new Intent(MainActivity.this, AplikasiCatatanHarian.class);
+                    startActivity(pindah);
+                } else {
+                    pindah =new Intent(MainActivity.this, AplikasiValidasiLogin.class);
                     startActivity(pindah);
                 }
             }
