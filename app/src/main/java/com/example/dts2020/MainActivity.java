@@ -14,6 +14,7 @@ import com.example.dts2020.activities.AplikasiEksternalStorage;
 import com.example.dts2020.activities.AplikasiSqlLite;
 import com.example.dts2020.activities.AplikasiValidasiLogin;
 import com.example.dts2020.activities.AplikasiInternalStorage;
+import com.example.dts2020.activities.SplashScreen;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     pindah =new Intent(MainActivity.this, AplikasiEksternalStorage.class);
                     startActivity(pindah);
                 } else if (i==5){
-                    pindah =new Intent(MainActivity.this, AplikasiCatatanHarian.class);
+                    pindah =new Intent(MainActivity.this, SplashScreen.class);
                     startActivity(pindah);
                 } else if (i==6){
                     pindah =new Intent(MainActivity.this, AplikasiValidasiLogin.class);

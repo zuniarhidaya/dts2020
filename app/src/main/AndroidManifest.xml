@@ -26,7 +26,6 @@
         <activity android:name=".activities.AplikasiInternalStorage" />
         <activity android:name=".activities.AplikasiCatatanHarian" />
         <activity android:name=".activities.AplikasiValidasiLogin" />
-        <activity android:name=".activities.AplikasiSqlLite" />
     </application>
 
 </manifest>

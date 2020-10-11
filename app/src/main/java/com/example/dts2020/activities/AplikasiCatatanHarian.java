@@ -51,10 +51,10 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
                 Intent intent = new Intent(AplikasiCatatanHarian.this, InsertAndViewActivity.class);
                 Map<String, Object> data = (Map<String, Object>) adapterView.getAdapter().getItem(i);
                 intent.putExtra("filename", data.get("name").toString());
-                Toast.makeText(AplikasiCatatanHarian.this,
-                        "Anda Memilih: ",
-                        data.get("name"),
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(AplikasiCatatanHarian.this,
+//                        "Anda Memilih: ",
+//                        data.get("name"),
+//                        Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
@@ -68,6 +68,9 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    private void setSupportActionBar(Toolbar toolbar) {
     }
 
     @Override
@@ -101,14 +104,14 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
         switch (requestCode){
             case REQUEST_CODE_STORAGE:
                 if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    mengambilListFilePadaFolder()
+                    mengambilListFilePadaFolder();
                 }
                 break;
         }
     }
 
     void mengambilListFilePadaFolder() {
-        String path = Environment.getExternalStorageDirectory().toString(), "/dts2020.proyek1";
+        String path = Environment.getExternalStorageDirectory().toString()+ "/dts2020.proyek1";
         File directory = new File(path);
 
         if(directory.exists()){
@@ -137,7 +140,7 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+//        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
