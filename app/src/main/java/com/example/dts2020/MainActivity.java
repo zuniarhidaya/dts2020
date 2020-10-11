@@ -9,17 +9,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.dts2020.activities.AplikasiCatatanHarian;
-import com.example.dts2020.activities.AplikasiEksternalStorage;
 import com.example.dts2020.activities.AplikasiSqlLite;
 import com.example.dts2020.activities.AplikasiValidasiLogin;
-import com.example.dts2020.activities.AplikasiInternalStorage;
 import com.example.dts2020.activities.SplashScreen;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] menu = new String[]{"Input Nama","Aplikasi Kalkulator","Aplikasi ListView", "Aplikasi Internal Storage",
-    "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login", "Aplikasi SQLite"};
+    String[] menu = new String[]{"Input Nama", "Aplikasi Kalkulator", "Aplikasi ListView", "Aplikasi Internal Storage",
+            "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login", "Aplikasi SQLite"};
 
     ListView listView;
 
@@ -30,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.listMenu);
 
-        ArrayAdapter arrayAdapter =new ArrayAdapter(this,
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1,
                 android.R.id.text1,
                 menu);
@@ -44,29 +41,29 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent pindah = null;
 
-                if(i==0){
-                    pindah =new Intent(MainActivity.this,AplikasiNama.class);
+                if (i == 0) {
+                    pindah = new Intent(MainActivity.this, AplikasiNama.class);
                     startActivity(pindah);
-                } else if(i==1){
-                    pindah =new Intent(MainActivity.this,AplikasiKalkulator.class);
+                } else if (i == 1) {
+                    pindah = new Intent(MainActivity.this, AplikasiKalkulator.class);
                     startActivity(pindah);
-                } else if (i==2){
-                    pindah =new Intent(MainActivity.this,AplikasiListView.class);
+                } else if (i == 2) {
+                    pindah = new Intent(MainActivity.this, AplikasiListView.class);
                     startActivity(pindah);
-                } else if (i==3){
-                    pindah =new Intent(MainActivity.this, AplikasiInternalStorage.class);
+                } else if (i == 3) {
+                    pindah = new Intent(MainActivity.this, InternalActivity.class);
                     startActivity(pindah);
-                } else if (i==4){
-                    pindah =new Intent(MainActivity.this, AplikasiEksternalStorage.class);
+                } else if (i == 4) {
+                    pindah = new Intent(MainActivity.this, EksternalActivity.class);
                     startActivity(pindah);
-                } else if (i==5){
-                    pindah =new Intent(MainActivity.this, AplikasiCatatanHarian.class);
+                } else if (i == 5) {
+                    pindah = new Intent(MainActivity.this, SplashScreen.class);
                     startActivity(pindah);
-                } else if (i==6){
-                    pindah =new Intent(MainActivity.this, AplikasiValidasiLogin.class);
+                } else if (i == 6) {
+                    pindah = new Intent(MainActivity.this, AplikasiValidasiLogin.class);
                     startActivity(pindah);
-                } else if(i==7){
-                    pindah =new Intent(MainActivity.this, AplikasiSqlLite.class);
+                } else if (i == 7) {
+                    pindah = new Intent(MainActivity.this, AplikasiSqlLite.class);
                     startActivity(pindah);
                 }
             }
