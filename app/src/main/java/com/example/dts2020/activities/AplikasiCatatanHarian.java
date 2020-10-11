@@ -41,9 +41,9 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aplikasi_catatan_harian);
 
-        Toolbar toolbar = findViewById(R.id.toolbarCatatan);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Aplikasi Catatan Harian");
+//        Toolbar toolbar = findViewById(R.id.toolbarCatatan);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setTitle("Aplikasi Catatan Harian");
         listView = findViewById(R.id.listCatatan);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -70,8 +70,8 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
         });
     }
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
+//    private void setSupportActionBar(Toolbar toolbar) {
+//    }
 
     @Override
     protected void onResume() {

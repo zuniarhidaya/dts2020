@@ -24,8 +24,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
-public class InsertAndViewActivity extends AppCompatActivity {
+public class InsertAndViewActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final int REQUEST_CODE_STORAGE = 100;
     int eventID = 0;
@@ -34,6 +35,7 @@ public class InsertAndViewActivity extends AppCompatActivity {
     boolean isEditable = false;
     String fileName = "";
     String tempCatatan = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,9 @@ public class InsertAndViewActivity extends AppCompatActivity {
         } else {
             bacaFile();
         }
+    }
+
+    private void setSupportActionBar(Toolbar toolbar) {
     }
 
     @Override
@@ -120,7 +125,7 @@ public class InsertAndViewActivity extends AppCompatActivity {
 
     void bacaFile() {
         String path = Environment.getExternalStorageDirectory().toString()+"/dts2020.proyek1";
-        File file = new File(path, edtFileName,getText().toString());
+        File file = new File(path, edtFileName.getText().toString());
         if (file.exists()){
             StringBuilder text = new StringBuilder();
             try {
@@ -147,6 +152,7 @@ public class InsertAndViewActivity extends AppCompatActivity {
             try {
                 file.createNewFile();
                 outputStream = new FileOutputStream(file);
+                OutputStreamWriter streamWriter = new OutputStreamWriter(outputStream);
                 streamWriter.append(edtCatatan.getText());
                 streamWriter.flush();
                 streamWriter.close();
@@ -201,5 +207,10 @@ public class InsertAndViewActivity extends AppCompatActivity {
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     pindah =new Intent(MainActivity.this, AplikasiEksternalStorage.class);
                     startActivity(pindah);
                 } else if (i==5){
-                    pindah =new Intent(MainActivity.this, SplashScreen.class);
+                    pindah =new Intent(MainActivity.this, AplikasiCatatanHarian.class);
                     startActivity(pindah);
                 } else if (i==6){
                     pindah =new Intent(MainActivity.this, AplikasiValidasiLogin.class);
