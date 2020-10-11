@@ -6,7 +6,6 @@
     android:padding="10dp"
     android:orientation="vertical">
 
-
     <Button
         android:id="@+id/buttonBuatFile"
         android:layout_width="match_parent"
