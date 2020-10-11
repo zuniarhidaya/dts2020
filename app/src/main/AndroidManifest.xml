@@ -13,11 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".activities.AplikasiSqlLite"></activity>
-=======
         <activity android:name=".LoginActivity"></activity>
->>>>>>> zuniar
+        <activity android:name=".activities.InsertAndViewActivity"></activity>
+        <activity android:name=".activities.SplashScreen" />
+        <activity android:name=".activities.AplikasiSqlLite" />
         <activity android:name=".AplikasiNama" />
         <activity android:name=".AplikasiKalkulator" />
         <activity android:name=".AplikasiListView" />
@@ -34,7 +33,6 @@
         <activity android:name=".activities.AplikasiInternalStorage" />
         <activity android:name=".activities.AplikasiCatatanHarian" />
         <activity android:name=".activities.AplikasiValidasiLogin" />
-        <activity android:name=".activities.AplikasiSqlLite" />
     </application>
 
 </manifest>

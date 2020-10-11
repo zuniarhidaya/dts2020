@@ -14,11 +14,12 @@ import com.example.dts2020.activities.AplikasiEksternalStorage;
 import com.example.dts2020.activities.AplikasiSqlLite;
 import com.example.dts2020.activities.AplikasiValidasiLogin;
 import com.example.dts2020.activities.AplikasiInternalStorage;
+import com.example.dts2020.activities.SplashScreen;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] menu = new String[]{"Input Nama","Aplikasi Kalkulator","Aplikasi ListView", "Aplikasi Internal Storage",
-    "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login", "Aplikasi SQLite"};
+    String[] menu = new String[]{"Input Nama", "Aplikasi Kalkulator", "Aplikasi ListView", "Aplikasi Internal Storage",
+            "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login", "Aplikasi SQLite"};
 
     ListView listView;
 
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.listMenu);
 
-        ArrayAdapter arrayAdapter =new ArrayAdapter(this,
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1,
                 android.R.id.text1,
                 menu);
@@ -56,9 +57,19 @@ public class MainActivity extends AppCompatActivity {
                     pindah = new Intent(MainActivity.this, InternalActivity.class);
                     startActivity(pindah);
                 } else if (i == 4) {
-                    pindah = new Intent(MainActivity.this, EksternalActivity.class);
+                    pindah = new Intent(MainActivity.this, AplikasiEksternalStorage.class);
+                    startActivity(pindah);
+                } else if (i == 5) {
+                    pindah = new Intent(MainActivity.this, SplashScreen.class);
+                    startActivity(pindah);
+                } else if (i == 6) {
+                    pindah = new Intent(MainActivity.this, AplikasiValidasiLogin.class);
+                    startActivity(pindah);
+                } else if (i == 7) {
+                    pindah = new Intent(MainActivity.this, AplikasiSqlLite.class);
+                    startActivity(pindah);
+                }
             }
-        }
-    });
+        });
     }
 }
