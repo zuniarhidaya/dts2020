@@ -43,32 +43,22 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent pindah = null;
 
-                if(i==0){
-                    pindah =new Intent(MainActivity.this,AplikasiNama.class);
+                if (i == 0) {
+                    pindah = new Intent(MainActivity.this, AplikasiNama.class);
                     startActivity(pindah);
-                } else if(i==1){
-                    pindah =new Intent(MainActivity.this,AplikasiKalkulator.class);
+                } else if (i == 1) {
+                    pindah = new Intent(MainActivity.this, AplikasiKalkulator.class);
                     startActivity(pindah);
-                } else if (i==2){
-                    pindah =new Intent(MainActivity.this,AplikasiListView.class);
+                } else if (i == 2) {
+                    pindah = new Intent(MainActivity.this, AplikasiListView.class);
                     startActivity(pindah);
-                } else if (i==3){
-                    pindah =new Intent(MainActivity.this, AplikasiInternalStorage.class);
+                } else if (i == 3) {
+                    pindah = new Intent(MainActivity.this, InternalActivity.class);
                     startActivity(pindah);
-                } else if (i==4){
-                    pindah =new Intent(MainActivity.this, AplikasiEksternalStorage.class);
-                    startActivity(pindah);
-                } else if (i==5){
-                    pindah =new Intent(MainActivity.this, AplikasiCatatanHarian.class);
-                    startActivity(pindah);
-                } else if (i==6){
-                    pindah =new Intent(MainActivity.this, AplikasiValidasiLogin.class);
-                    startActivity(pindah);
-                } else if(i==7){
-                    pindah =new Intent(MainActivity.this, AplikasiSqlLite.class);
-                    startActivity(pindah);
-                }
+                } else if (i == 4) {
+                    pindah = new Intent(MainActivity.this, EksternalActivity.class);
             }
-        });
+        }
+    });
     }
 }

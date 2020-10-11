@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dts2020">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".activities.AplikasiSqlLite"></activity>
+=======
+        <activity android:name=".LoginActivity"></activity>
+>>>>>>> zuniar
         <activity android:name=".AplikasiNama" />
         <activity android:name=".AplikasiKalkulator" />
         <activity android:name=".AplikasiListView" />
+        <activity android:name=".InternalActivity" />
+        <activity android:name=".EksternalActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
