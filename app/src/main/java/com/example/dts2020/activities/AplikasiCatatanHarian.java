@@ -45,19 +45,19 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
 //        setSupportActionBar(toolbar);
 //        getSupportActionBar().setTitle("Aplikasi Catatan Harian");
         listView = findViewById(R.id.listCatatan);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(AplikasiCatatanHarian.this, InsertAndViewActivity.class);
-                Map<String, Object> data = (Map<String, Object>) adapterView.getAdapter().getItem(i);
-                intent.putExtra("filename", data.get("name").toString());
-//                Toast.makeText(AplikasiCatatanHarian.this,
-//                        "Anda Memilih: ",
-//                        data.get("name"),
-//                        Toast.LENGTH_SHORT).show();
-                startActivity(intent);
-            }
-        });
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent = new Intent(AplikasiCatatanHarian.this, InsertAndViewActivity.class);
+//                Map<String, Object> data = (Map<String, Object>) adapterView.getAdapter().getItem(i);
+//                intent.putExtra("filename", data.get("name").toString());
+////                Toast.makeText(AplikasiCatatanHarian.this,
+////                        "Anda Memilih: ",
+////                        data.get("name"),
+////                        Toast.LENGTH_SHORT).show();
+//                startActivity(intent);
+//            }
+//        });
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -148,8 +148,8 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_tambah:
-                Intent intent = new Intent(this,InsertAndViewActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this,InsertAndViewActivity.class);
+//                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
