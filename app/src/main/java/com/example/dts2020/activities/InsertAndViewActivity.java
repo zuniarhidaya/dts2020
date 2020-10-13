@@ -142,7 +142,7 @@ public class InsertAndViewActivity extends AppCompatActivity implements View.OnC
         String path = Environment.getExternalStorageDirectory().toString()+"/dts2020.proyek1";
         File parent = new File(path);
         if (parent.exists()){
-            File file = new File(path, fileName);
+            File file = new File(path, edtFileName.getText().toString());
             FileOutputStream outputStream = null;
 
             try {
