@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -35,29 +36,28 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
 
     public static final int REQUEST_CODE_STORAGE = 100;
     ListView listView;
+    Button actionTambah;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aplikasi_catatan_harian);
 
-//        Toolbar toolbar = findViewById(R.id.toolbarCatatan);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Aplikasi Catatan Harian");
+        actionTambah = findViewById(R.id.action_tambah);
         listView = findViewById(R.id.listCatatan);
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Intent intent = new Intent(AplikasiCatatanHarian.this, InsertAndViewActivity.class);
-//                Map<String, Object> data = (Map<String, Object>) adapterView.getAdapter().getItem(i);
-//                intent.putExtra("filename", data.get("name").toString());
-////                Toast.makeText(AplikasiCatatanHarian.this,
-////                        "Anda Memilih: ",
-////                        data.get("name"),
-////                        Toast.LENGTH_SHORT).show();
-//                startActivity(intent);
-//            }
-//        });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(AplikasiCatatanHarian.this, InsertAndViewActivity.class);
+                Map<String, Object> data = (Map<String, Object>) adapterView.getAdapter().getItem(i);
+                intent.putExtra("filename", data.get("name").toString());
+                Toast.makeText(AplikasiCatatanHarian.this,
+                        data.get("name").toString(),
+                        Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -68,10 +68,15 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
                 return true;
             }
         });
-    }
 
-//    private void setSupportActionBar(Toolbar toolbar) {
-//    }
+        actionTambah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AplikasiCatatanHarian.this, InsertAndViewActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     @Override
     protected void onResume() {
@@ -148,8 +153,8 @@ public class AplikasiCatatanHarian extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_tambah:
-//                Intent intent = new Intent(this,InsertAndViewActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(this,InsertAndViewActivity.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
