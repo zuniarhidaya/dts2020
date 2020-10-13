@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
 
+    public static final String FILENAME = "login";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     pindah = new Intent(MainActivity.this, SplashScreen.class);
                     startActivity(pindah);
                 } else if (i == 6) {
-                    pindah = new Intent(MainActivity.this, AplikasiValidasiLogin.class);
+                    pindah = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(pindah);
                 } else if (i == 7) {
                     pindah = new Intent(MainActivity.this, AplikasiSqlLite.class);
