@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (datauser[1].equals(password.getText().toString())) {
                 simpanFileLogin();
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, ProfileActivity.class);
                 startActivity(intent);
                 finish();
             } else {
