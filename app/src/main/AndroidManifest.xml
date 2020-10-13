@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dts2020">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".activities.InsertAndViewActivity"/>
+        <activity android:name=".activities.TambahDataAlamat" />
+        <activity android:name=".activities.AplikasiDatabase" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".activities.SplashScreen" />
         <activity android:name=".activities.AplikasiSqlLite" />
         <activity android:name=".AplikasiNama" />
@@ -31,5 +30,9 @@
         <activity android:name=".activities.AplikasiCatatanHarian" />
         <activity android:name=".activities.AplikasiValidasiLogin" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>
