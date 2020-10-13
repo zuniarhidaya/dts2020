@@ -7,5 +7,11 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    >>>>>>> zuniar
+    <string name="proyek2">Proyek 2</string>
+    <string name="email">Email</string>
+    <string name="namalengkap">Nama Lengkap</string>
+    <string name="asalsekolah">Asal Sekolah</string>
+    <string name="alamat">Alamat Tinggal</string>
+    <string name="simpan">Simpan</string>
+    <string name="logout">Logout</string>
 </resources>
