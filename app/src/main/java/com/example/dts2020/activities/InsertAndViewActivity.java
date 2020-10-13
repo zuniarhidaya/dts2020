@@ -120,6 +120,12 @@ public class InsertAndViewActivity extends AppCompatActivity implements View.OnC
             StringBuilder text = new StringBuilder();
             try {
                 BufferedReader br = new BufferedReader(new FileReader((file)));
+                String line = br.readLine();
+                while (line != null){
+                    text.append(line);
+                    line = br.readLine();
+                }
+                br.close();
             } catch (IOException e) {
                 System.out.println("Error"+e.getMessage());
             }
@@ -136,7 +142,7 @@ public class InsertAndViewActivity extends AppCompatActivity implements View.OnC
         String path = Environment.getExternalStorageDirectory().toString()+"/dts2020.proyek1";
         File parent = new File(path);
         if (parent.exists()){
-            File file = new File(path, edtFileName.getText().toString());
+            File file = new File(path, fileName);
             FileOutputStream outputStream = null;
 
             try {
