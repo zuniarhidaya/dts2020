@@ -40,7 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -67,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (datauser[1].equals(password.getText().toString())) {
                 simpanFileLogin();
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, SplashScreen.class);
                 startActivity(intent);
                 finish();
             } else {
