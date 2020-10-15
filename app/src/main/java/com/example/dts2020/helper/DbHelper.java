@@ -61,14 +61,35 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     public void insert(String name, String address){
+        SQLiteDatabase database = this.getWritableDatabase();
+        String queryValues = "INSERT INTO " + TABLE_SQLite + " (name, database) " +
+                 "VALUES ('" + name + "', '" + address + "')";
 
+        Log.e("insert sqlite", "" + queryValues);
+        database.execSQL(queryValues);
+        database.close();
     }
 
-    public void update(String name, String address){
+    public void update(int id, String name, String address){
+        SQLiteDatabase database = this.getWritableDatabase();
+        String updateQuery = "UPDATE " + TABLE_SQLite + " SET " +
+                COLUMN_NAME + "='" + name + "', "
+                + COLUMN_ADDRESS + "='" + address + "', "
+                + "WHERE "+COLUMN_ID + "='" + id + "'";
 
+        Log.e("update sqlite", "" + updateQuery);
+        database.execSQL(updateQuery);
+        database.close();
     }
 
     public void delete(int id){
+        SQLiteDatabase database = this.getWritableDatabase();
 
+        String deleteQuery = "DELETE FROM " + TABLE_SQLite + " WHERE " +
+                COLUMN_ID + "=" + "'" + id + "'";
+
+        Log.e("delete sqlite", "" + deleteQuery);
+        database.execSQL(deleteQuery);
+        database.close();
     }
 }
