@@ -9,5 +9,9 @@
     tools:context=".activities.AplikasiSqlLite"
     tools:showIn="@layout/activity_aplikasi_sql_lite">
 
+    <ListView
+        android:id="@+id/listViewSql"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>

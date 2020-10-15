@@ -14,6 +14,7 @@
         <activity android:name=".activities.AplikasiDatabase" />
         <activity android:name=".activities.SplashScreen" />
         <activity android:name=".activities.AplikasiSqlLite" />
+        <activity android:name=".activities.AddEdit" />
         <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SplashScreen" />

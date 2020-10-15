@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.dts2020.R;
+import com.example.dts2020.model.Data;
 
 import java.util.List;
 
