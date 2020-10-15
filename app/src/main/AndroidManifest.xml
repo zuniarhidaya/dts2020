@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.InsertAndViewActivity"/>
+        <activity android:name=".activities.AplikasiSqlite11"></activity>
+        <activity android:name=".activities.InsertAndViewActivity" />
         <activity android:name=".activities.TambahDataAlamat" />
         <activity android:name=".activities.AplikasiDatabase" />
         <activity android:name=".activities.SplashScreen" />
         <activity android:name=".activities.AplikasiSqlLite" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".activities.AddEdit" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SplashScreen" />
         <activity android:name=".LoginActivity" />
@@ -33,8 +35,9 @@
         <activity android:name=".activities.AplikasiCatatanHarian" />
         <activity android:name=".activities.AplikasiValidasiLogin" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

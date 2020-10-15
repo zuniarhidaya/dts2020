@@ -10,13 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.dts2020.activities.AplikasiSqlLite;
+import com.example.dts2020.activities.AplikasiSqlite11;
 import com.example.dts2020.activities.AplikasiValidasiLogin;
 import com.example.dts2020.activities.SplashScreen;
 
 public class MainActivity extends AppCompatActivity {
 
     String[] menu = new String[]{"Input Nama", "Aplikasi Kalkulator", "Aplikasi ListView", "Aplikasi Internal Storage",
-            "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login", "Aplikasi SQLite"};
+            "Aplikasi Eksternal Storage", "Proyek 1: Catatan Harian", "Proyek 2: Validasi Login", "Aplikasi SQLite", "Aplikasi Database Sqlite"};
 
     ListView listView;
 
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(pindah);
                 } else if (i == 7) {
                     pindah = new Intent(MainActivity.this, AplikasiSqlLite.class);
+                    startActivity(pindah);
+                } else if (i == 8) {
+                    pindah = new Intent(MainActivity.this, AplikasiSqlite11.class);
                     startActivity(pindah);
                 }
             }
